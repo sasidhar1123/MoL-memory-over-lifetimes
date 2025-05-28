@@ -24,16 +24,26 @@ I built a new architecture that learns tasks **without forgetting**:
 > One brain. Many rooms. No forgetting.
 
 
-## 🔬 Key Experiments
+## Experiments
 
-| Test | What I Did | Result |
-|------|------------|--------|
-| MoL vs EWC vs LwF | Trained tasks one-by-one | MoL retains old task accuracy, others forget |
-| Pruning Adapters | Pruned 40% of each room | Saves memory, keeps performance |
-| Continual Task Stream | Trained tasks in order | No retraining needed. No forgetting. |
-| t-SNE Visualization | Plotted embeddings | Rooms stay separate in shared memory |
+Below are key results from 3 core experiments.  
+ See full details here → [experiments.md](experiments.md)
 
-Visual proof in `/experiments`
+
+1.MoL vs EWC vs LwF
+![Accuracy](experiments/accuracy_table.png)  
+🔗 [Colab](https://colab.research.google.com/drive/1WEq2UJynNAPVa5NcXnkP37YLgIYZC56h#scrollTo=MoL_vs_EWC_LwF)
+
+
+2.Adapter Pruning (Memory Compression)
+![Pruning](experiments/pruning_stats.png)  
+🔗 [Colab](https://colab.research.google.com/drive/1WEq2UJynNAPVa5NcXnkP37YLgIYZC56h#scrollTo=Adapter_Pruning)
+
+
+3.t-SNE Visualization of Task Embeddings
+![t-SNE](experiments/tSNE_plot.png)  
+🔗 [Colab](https://colab.research.google.com/drive/1WEq2UJynNAPVa5NcXnkP37YLgIYZC56h#scrollTo=tSNE_Embedding)
+
 
 
 ## Repo Structure
@@ -43,7 +53,7 @@ MoL-AGI-memory/
 ├── README.md              ← You're here
 ├── MoL_colab.ipynb        ← Main code + demo
 ├── paper/
-│   └── MoL_paper.pdf      ← Research-style paper
+│   └── MoL_paper.pdf      ← Research paper
 ├── experiments/
 │   ├── tSNE_plot.png
 │   ├── accuracy_table.png
